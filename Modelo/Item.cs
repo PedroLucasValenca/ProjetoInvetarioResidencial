@@ -16,8 +16,15 @@ namespace Modelo
 
         public String Descricao { get; set; }
 
+        public DateTime DataArmazenamento { get; set; }
+
         public int LocalID { get; set; }
 
-        public int LocalUsoID { get; set; }
+        public virtual Local _Local { get; set; }
+
+        public int TipoUsoID { get; set; }
+
+        public virtual TipoUso _TipoUso { get; set; } 
+
     }
 }
