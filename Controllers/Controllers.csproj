@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\IBaseController.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="ItensController.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
