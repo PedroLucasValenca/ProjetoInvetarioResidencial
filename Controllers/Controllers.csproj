@@ -50,6 +50,7 @@
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="ItensController.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="LocaisController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
