@@ -1,4 +1,5 @@
 ﻿using Controllers.Base;
+using Controllers.DAL;
 using Modelo;
 using System;
 using System.Collections.Generic;
@@ -8,31 +9,41 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class LocaisController : IBaseController<Local>
+    public class LocaisController : IBaseController<Local>
     {
+        Contexto contexto = new Contexto();
+
         public void Adicionar(Local entity)
         {
-            throw new NotImplementedException();
+            contexto.Locais.Add(entity);
+            contexto.SaveChanges();
         }
 
         public Local BuscarPorID(int id)
         {
-            throw new NotImplementedException();
+            return contexto.Locais.Find(id);
         }
 
         public void Editar(Local entity)
         {
-            throw new NotImplementedException();
+            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            Local Locall = BuscarPorID(id);
+
+            if (Locall != null)
+            {
+                contexto.Locais.Remove(Locall);
+                contexto.SaveChanges();
+            }
         }
 
         public IList<Local> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Locais.ToList();
         }
     }
 }
