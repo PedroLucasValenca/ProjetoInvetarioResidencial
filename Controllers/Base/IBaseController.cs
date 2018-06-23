@@ -16,6 +16,8 @@ namespace Controllers.Base
 
         IList<P> ListarTodos();
 
+        IList<P> ListarPorNome(String Nome);
+
         P BuscarPorID(int id);
 
 

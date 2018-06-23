@@ -41,6 +41,11 @@ namespace Controllers
 
         }
 
+        public IList<Item> ListarPorNome(string Nome)
+        {
+            return contexto.Items.Where(ite => ite.NomeItem == Nome).ToList();
+        }
+
         public IList<Item> ListarTodos()
         {
             return contexto.Items.ToList();

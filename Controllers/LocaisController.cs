@@ -41,6 +41,11 @@ namespace Controllers
             }
         }
 
+        public IList<Local> ListarPorNome(string Nome)
+        {
+            return contexto.Locais.Where(loc => loc.NomeLocal == Nome).ToList();
+        }
+
         public IList<Local> ListarTodos()
         {
             return contexto.Locais.ToList();
