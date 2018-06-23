@@ -12,6 +12,6 @@ namespace Modelo
 
         public String NomeLocal { get; set; }
 
-
+        public String Descricao { get; set; }
     }
 }
