@@ -27,15 +27,17 @@
         <Label Content="Nome Item" HorizontalAlignment="Left" Margin="90,145,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
         <TextBox x:Name="NomeItemLabel" HorizontalAlignment="Left" Height="31" Margin="296,145,0,0" TextWrapping="Wrap" Text="Digite o Nome do Item" VerticalAlignment="Top" Width="171" TextChanged="TextBox_TextChanged"/>
         <Label Content="Quantidade" HorizontalAlignment="Left" Margin="90,202,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
-        <TextBox x:Name="QuantidadeLabel" HorizontalAlignment="Left" Height="31" Margin="296,202,0,0" TextWrapping="Wrap" Text="Digite a Quantidade do Item" VerticalAlignment="Top" Width="171"    />
+        <TextBox x:Name="QuantidadeLabel" HorizontalAlignment="Left" Height="31" Margin="296,202,0,0" TextWrapping="Wrap" Text="Digite a Quantidade do Item" VerticalAlignment="Top" Width="171" TextChanged="QuantidadeLabel_TextChanged"    />
         <Label Content="Descrição" HorizontalAlignment="Left" Margin="90,256,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
         <TextBox x:Name="DescricaoLabel" HorizontalAlignment="Left" Height="31" Margin="296,256,0,0" TextWrapping="Wrap" Text="Digite a descrição do Item" VerticalAlignment="Top" Width="171" TextChanged="TextBox_TextChanged"/>
         <Label Content="Data Armazenamento" HorizontalAlignment="Left" Margin="90,315,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
         <DatePicker x:Name="DataArmazenamentoLabel" HorizontalAlignment="Left" Margin="296,315,0,0" VerticalAlignment="Top" Width="171" Height="31"/>
         <Label Content="Local Armazenamento" HorizontalAlignment="Left" Margin="90,367,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
-        <ComboBox x:Name="LocalArmazenamentoLabel" HorizontalAlignment="Left" Margin="296,367,0,0" VerticalAlignment="Top" Width="171" Height="31" />
+        <ComboBox x:Name="LocalArmazenamentoLabel" HorizontalAlignment="Left" Margin="296,367,0,0" VerticalAlignment="Top" Width="171" Height="31" Loaded="LocalArmazenamentoLabel_Loaded" DisplayMemberPath="NomeLocal" />
         <Label Content="Tipo de Uso" HorizontalAlignment="Left" Margin="90,418,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
         <ComboBox x:Name="TipoUsoLabel" HorizontalAlignment="Left" Margin="296,418,0,0" VerticalAlignment="Top" Width="171" Height="31"/>
+        <Button x:Name="CadastrarButton" Content="Cadastrar" HorizontalAlignment="Left" Margin="605,218,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="CadastrarButton_Click"/>
+        <Button x:Name="CancelarButton" Content="Cancelar" HorizontalAlignment="Left" Margin="605,315,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
 
 
 
