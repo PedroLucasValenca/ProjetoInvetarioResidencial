@@ -73,8 +73,15 @@
       <DependentUpon>ItemView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ItensListaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItensListaView.xaml.cs">
+      <DependentUpon>ItensListaView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
