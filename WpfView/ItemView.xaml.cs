@@ -66,5 +66,10 @@ namespace WpfView
 
             LocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
         }
+
+        private void onclick_Click(object sender, RoutedEventArgs e)
+        {
+            new Uri("ItensListaView.xaml");
+        }
     }
 }

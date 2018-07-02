@@ -10,7 +10,7 @@
         <Menu FontSize="16" IsMainMenu="True" Margin="0,0,0,485">
             <MenuItem Header="Item" FontSize="16">
                 <MenuItem Header="Criar Item"></MenuItem>
-                <MenuItem Header="Listar Item"></MenuItem>
+                <MenuItem x:Name="onclick" Header="Listar Item" Click="onclick_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Local Armazenamento">
                 <MenuItem Header="Criar Locação"></MenuItem>
