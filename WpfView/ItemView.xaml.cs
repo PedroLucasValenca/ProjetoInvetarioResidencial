@@ -42,11 +42,11 @@ namespace WpfView
                 item.DataArmazenamento = DataArmazenamentoLabel.SelectedDate.Value;
 
             }
-            throw new NullReferenceException("O data não pode ser vazia!!");
+            
 
             item.LocalID = ((Local)LocalArmazenamentoLabel.SelectedItem).LocalID;
 
-
+throw new NullReferenceException("O data não pode ser vazia!!");
 
 
 
@@ -67,9 +67,32 @@ namespace WpfView
             LocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
         }
 
-        private void onclick_Click(object sender, RoutedEventArgs e)
+       
+
+        private void CriarLocacaoButton_Click(object sender, RoutedEventArgs e)
         {
-            new Uri("ItensListaView.xaml");
+            LocacaoView locacaoView = new LocacaoView();
+
+            locacaoView.ShowDialog();
+        }
+
+        private void ListarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItensListaView itensListaView = new ItensListaView();
+
+            itensListaView.ShowDialog();
+        }
+
+        private void CriarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void ListarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ListarLocacaoView locacaoView = new ListarLocacaoView();
+
+            locacaoView.ShowDialog();
         }
     }
 }

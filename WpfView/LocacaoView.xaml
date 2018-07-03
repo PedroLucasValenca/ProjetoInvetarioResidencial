@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfView.LocacaoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="LocacaoView" Height="550" Width="800">
+    <Grid>
+        <Menu FontSize="16" IsMainMenu="True" Margin="0,0,0,485">
+            <MenuItem Header="Item" FontSize="16">
+                <MenuItem x:Name="CriarItemButton" Header="Criar Item" Click="CriarItemButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarItemButton" Header="Listar Item" Click="ListarItemButton_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Local Armazenamento">
+                <MenuItem x:Name="CriarLocacaoButton" Header="Criar Locação" Click="CriarLocacaoButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarLocacaoButton" Header="Listar Locações" Click="ListarLocacaoButton_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tipo de Uso">
+                <MenuItem Header="Criar tipo de Uso"></MenuItem>
+                <MenuItem Header="Listar Tipos de Uso"></MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <Label  Content="Locação" HorizontalAlignment="Center" Margin="337,45,367,0" VerticalAlignment="Top" FontSize="22" Width="88"/>
+        <Label Content="Nome Locação" HorizontalAlignment="Left" Margin="173,149,0,0" VerticalAlignment="Top" Height="41" Width="115" FontSize="16"/>
+        <TextBox x:Name="NomeLocalLabel" HorizontalAlignment="Left" Height="37" Margin="349,149,0,0" TextWrapping="Wrap" Text="Digite o nome da locação" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.5,0.5"></TextBox>
+        <Label Content="Descrição Locação" HorizontalAlignment="Left" Margin="174,237,0,0" VerticalAlignment="Top" Height="37" Width="143" FontSize="16"/>
+        <TextBox x:Name="DescricaoLocalLabel" HorizontalAlignment="Left" Height="41" Margin="350,233,0,0" TextWrapping="Wrap" Text="Digite a descrição da locação" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.5,0.5"></TextBox>
+        <Button x:Name="CadastrarLocacaoButton" Content="Cadastrar" HorizontalAlignment="Left" Margin="218,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="CadastrarLocacaoButton_Click" />
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="405,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16"/>
+    </Grid>
+</Window>
