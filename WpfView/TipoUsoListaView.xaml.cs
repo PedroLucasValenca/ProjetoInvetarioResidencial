@@ -25,7 +25,9 @@ namespace WpfView
             InitializeComponent();
         }
 
-        private void TipoUsoDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    
+
+        private void TipoUsoDataGrid_Loaded(object sender, RoutedEventArgs e)
         {
             TiposUsoController tiposUsoController = new TiposUsoController();
 

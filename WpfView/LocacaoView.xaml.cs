@@ -44,9 +44,9 @@ namespace WpfView
 
         private void ListarLocacaoButton_Click(object sender, RoutedEventArgs e)
         {
-            LocacaoView locacaoView = new LocacaoView();
+            ListarLocacaoView listarLocacaoView = new ListarLocacaoView();
 
-            locacaoView.ShowDialog();
+            listarLocacaoView.ShowDialog();
         }
 
         private void CriarItemButton_Click(object sender, RoutedEventArgs e)

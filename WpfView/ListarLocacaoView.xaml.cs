@@ -25,7 +25,9 @@ namespace WpfView
             InitializeComponent();
         }
 
-        private void LocacaoDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+       
+
+        private void LocacaoDataGrid_Loaded(object sender, RoutedEventArgs e)
         {
             LocaisController locaisController = new LocaisController();
 

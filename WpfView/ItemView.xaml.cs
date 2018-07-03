@@ -20,9 +20,9 @@ namespace WpfView
     /// <summary>
     /// Interação lógica para MainWindow.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ItemView : Window
     {
-        public MainWindow()
+        public ItemView()
         {
             InitializeComponent();
         }

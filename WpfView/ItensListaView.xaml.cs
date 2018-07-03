@@ -25,7 +25,9 @@ namespace WpfView
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+
+        private void ItemDataGrid_Load(object sender, RoutedEventArgs e)
         {
             ItensController itensControler = new ItensController();
 
