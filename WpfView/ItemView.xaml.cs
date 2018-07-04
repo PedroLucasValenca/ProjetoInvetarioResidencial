@@ -42,13 +42,17 @@ namespace WpfView
                 item.DataArmazenamento = DataArmazenamentoLabel.SelectedDate.Value;
 
             }
+            else
+            {
+                throw new NullReferenceException("O data não pode ser vazia!!");
+            }
             
 
             item.LocalID = ((Local)LocalArmazenamentoLabel.SelectedItem).LocalID;
 
-throw new NullReferenceException("O data não pode ser vazia!!");
 
 
+            itensController.Adicionar(item);
 
 
 

@@ -62,6 +62,8 @@ namespace WpfView
 
             local.NomeLocal = NomeLocalLabel.Text;
             local.Descricao = DescricaoLocalLabel.Text;
+
+            locaisController.Adicionar(local);
         }
     }
 }
