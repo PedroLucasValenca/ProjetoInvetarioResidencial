@@ -9,16 +9,16 @@
     <Grid>
         <Menu FontSize="16" IsMainMenu="True" Margin="0,0,0,485">
             <MenuItem Header="Item" FontSize="16">
-                <MenuItem Header="Criar Item"></MenuItem>
-                <MenuItem Header="Listar Itens" FontSize="16"></MenuItem>
+                <MenuItem x:Name="CriarItemButton" Header="Criar Item" Click="CriarItemButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarItemButton" Header="Listar Item" Click="ListarItemButton_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Local Armazenamento">
-                <MenuItem Header="Criar Locação"></MenuItem>
-                <MenuItem Header="Listar Locações"></MenuItem>
+                <MenuItem x:Name="CriarLocacaoButton" Header="Criar Locação" Click="CriarLocacaoButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarLocacaoButton" Header="Listar Locações" Click="ListarLocacaoButton_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Tipo de Uso">
-                <MenuItem Header="Criar Tipo de Uso"></MenuItem>
-                <MenuItem Header="Listar Tipos de Uso"></MenuItem>
+                <MenuItem x:Name="CriarTipoUsoButton" Header="Criar tipo de Uso" Click="CriarTipoUsoButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarTipoUsoButton" Header="Listar Tipos de Uso" Click="ListarTipoUsoButton_Click"></MenuItem>
             </MenuItem>
 
         </Menu>

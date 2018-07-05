@@ -51,7 +51,9 @@ namespace WpfView
 
         private void CriarItemButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            ItemView itemView = new ItemView();
+
+            itemView.ShowDialog();
         }
 
         private void CadastrarLocacaoButton_Click(object sender, RoutedEventArgs e)
@@ -64,6 +66,20 @@ namespace WpfView
             local.Descricao = DescricaoLocalLabel.Text;
 
             locaisController.Adicionar(local);
+        }
+
+        private void CriarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoView tipoUsoView = new TipoUsoView();
+
+            tipoUsoView.ShowDialog();
+        }
+
+        private void ListarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoListaView tipoUsoListaView = new TipoUsoListaView();
+
+            tipoUsoListaView.ShowDialog();
         }
     }
 }

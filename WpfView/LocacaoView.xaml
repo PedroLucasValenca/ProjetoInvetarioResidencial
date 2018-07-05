@@ -17,8 +17,8 @@
                 <MenuItem x:Name="ListarLocacaoButton" Header="Listar Locações" Click="ListarLocacaoButton_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Tipo de Uso">
-                <MenuItem Header="Criar tipo de Uso"></MenuItem>
-                <MenuItem Header="Listar Tipos de Uso"></MenuItem>
+                <MenuItem x:Name="CriarTipoUsoButton" Header="Criar tipo de Uso" Click="CriarTipoUsoButton_Click"></MenuItem>
+                <MenuItem  x:Name="ListarTipoUsoButton" Header="Listar Tipos de Uso" Click="ListarTipoUsoButton_Click"></MenuItem>
             </MenuItem>
 
         </Menu>

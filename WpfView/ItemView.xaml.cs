@@ -32,7 +32,7 @@ namespace WpfView
             ItensController itensController = new ItensController();
 
             Item item = new Item();
-
+            
             item.NomeItem = NomeItemLabel.Text;
             item.Quantidade = int.Parse(QuantidadeLabel.Text);
             item.Descricao = DescricaoLabel.Text;
@@ -50,11 +50,12 @@ namespace WpfView
 
             item.LocalID = ((Local)LocalArmazenamentoLabel.SelectedItem).LocalID;
 
-
+            item.TipoUsoID = ((TipoUso)TipoUsoLabel.SelectedItem).TipoUsoID;
 
             itensController.Adicionar(item);
 
-
+            MessageBox.Show("Item adicionado com sucesso");
+            
 
 
 
@@ -71,7 +72,8 @@ namespace WpfView
             LocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
         }
 
-       
+ 
+
 
         private void CriarLocacaoButton_Click(object sender, RoutedEventArgs e)
         {
@@ -89,7 +91,9 @@ namespace WpfView
 
         private void CriarItemButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            ItemView itemView = new ItemView();
+
+            itemView.ShowDialog();
         }
 
         private void ListarLocacaoButton_Click(object sender, RoutedEventArgs e)
@@ -97,6 +101,27 @@ namespace WpfView
             ListarLocacaoView locacaoView = new ListarLocacaoView();
 
             locacaoView.ShowDialog();
+        }
+
+        private void CriarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoView tipoUsoView = new TipoUsoView();
+
+            tipoUsoView.ShowDialog();
+        }
+
+        private void ListarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoListaView tipoUsoListaView = new TipoUsoListaView();
+
+            tipoUsoListaView.ShowDialog();
+        }
+
+        private void TipoUsoLabel_Loaded(object sender, RoutedEventArgs e)
+        {
+            TiposUsoController tiposUsoController = new TiposUsoController();
+
+            TipoUsoLabel.ItemsSource = tiposUsoController.ListarTodos();
         }
     }
 }

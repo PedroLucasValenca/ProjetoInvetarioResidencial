@@ -33,5 +33,49 @@ namespace WpfView
 
             LocacaoDataGrid.ItemsSource = locaisController.ListarTodos();
         }
+
+        private void ListarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItensListaView itensListaView = new ItensListaView();
+
+            itensListaView.ShowDialog();
+        }
+
+        private void CriarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+            LocacaoView locacaoView = new LocacaoView();
+
+            locacaoView.ShowDialog();
+        }
+
+        private void ListarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ListarLocacaoView listarLocacaoView = new ListarLocacaoView();
+
+            listarLocacaoView.ShowDialog();
+        }
+
+        private void CriarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemView itemView = new ItemView();
+
+            itemView.ShowDialog();
+        }
+
+
+        private void CriarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoView tipoUsoView = new TipoUsoView();
+
+            tipoUsoView.ShowDialog();
+        }
+
+        private void ListarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TipoUsoListaView tipoUsoListaView = new TipoUsoListaView();
+
+            tipoUsoListaView.ShowDialog();
+        }
+
     }
 }
