@@ -77,5 +77,9 @@ namespace WpfView
             tipoUsoListaView.ShowDialog();
         }
 
+        private void LocacaoDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
