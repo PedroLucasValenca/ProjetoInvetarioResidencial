@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfView.EditaTipoUsoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="EditaTipoUsoView" Height="550" Width="800">
+    <Grid>
+        <Menu FontSize="16" IsMainMenu="True" Margin="0,0,0,485">
+            <MenuItem Header="Item" FontSize="16">
+                <MenuItem x:Name="CriarItemButton" Header="Criar Item" Click="CriarItemButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarItemButton" Header="Listar Item" Click="ListarItemButton_Click" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Local Armazenamento">
+                <MenuItem x:Name="CriarLocacaoButton" Header="Criar Locação" Click="CriarLocacaoButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarLocacaoButton" Header="Listar Locações" Click="ListarLocacaoButton_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tipo de Uso">
+                <MenuItem x:Name="CriarTipoUsoButton" Header="Criar tipo de Uso" Click="CriarTipoUsoButton_Click"></MenuItem>
+                <MenuItem x:Name="ListarTipoUsoButton" Header="Listar Tipos de Uso" Click="ListarTipoUsoButton_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label  Content="Edita Tipo de Uso" HorizontalAlignment="Center" Margin="285,45,320,0" VerticalAlignment="Top" FontSize="22" Width="187"/>
+        <Label Content="Nome Tipo de Uso" HorizontalAlignment="Left" Margin="144,149,0,0" VerticalAlignment="Top" Height="41" Width="144" FontSize="16"/>
+        <TextBox x:Name="EditaNomeTipoUsoLabel" HorizontalAlignment="Left" Height="37" Margin="349,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" RenderTransformOrigin="0.5,0.5"></TextBox>
+        <Label Content="Descrição Tipo de Uso" HorizontalAlignment="Left" Margin="144,237,0,0" VerticalAlignment="Top" Height="37" Width="173" FontSize="16"/>
+        <TextBox x:Name="EditaDescricaoTipoUsoLabel" HorizontalAlignment="Left" Height="41" Margin="350,233,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5"></TextBox>
+        <Button x:Name="EditarTipoUsoButton" Content="Salvar" HorizontalAlignment="Left" Margin="218,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="EditarTipoUsoButton_Click"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="405,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="ExcluirTipoUsoButton_Click" Background="Red"/>
+        <TextBox x:Name="EditaIDTipoUsoLabel" HorizontalAlignment="Left" Height="35" Margin="44,106,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72" FontSize="18" IsReadOnly="True" Background="Aquamarine"/>
+    </Grid>
+</Window>

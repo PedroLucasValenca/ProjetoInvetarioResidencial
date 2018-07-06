@@ -17,22 +17,16 @@ using System.Windows.Shapes;
 namespace WpfView
 {
     /// <summary>
-    /// Lógica interna para TipoUsoListaView.xaml
+    /// Lógica interna para EditaTipoUsoView.xaml
     /// </summary>
-    public partial class TipoUsoListaView : Window
+    public partial class EditaTipoUsoView : Window
     {
-        public TipoUsoListaView()
+        public EditaTipoUsoView(TipoUso tipoUso)
         {
             InitializeComponent();
-        }
-
-    
-
-        private void TipoUsoDataGrid_Loaded(object sender, RoutedEventArgs e)
-        {
-            TiposUsoController tiposUsoController = new TiposUsoController();
-
-            TipoUsoDataGrid.ItemsSource = tiposUsoController.ListarTodos();
+            EditaIDTipoUsoLabel.Text = tipoUso.TipoUsoID.ToString();
+            EditaNomeTipoUsoLabel.Text = tipoUso.NomeTipoUso;
+            EditaDescricaoTipoUsoLabel.Text = tipoUso.Descricao;
         }
 
         private void ListarItemButton_Click(object sender, RoutedEventArgs e)
@@ -78,24 +72,27 @@ namespace WpfView
             tipoUsoListaView.ShowDialog();
         }
 
-        private void TipoUsoDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void EditarTipoUsoButton_Click(object sender, RoutedEventArgs e)
         {
-            var grid = sender as DataGrid;
-
-            var cellVallue = (Modelo.TipoUso)grid.SelectedValue;
+            TiposUsoController tipoUsoController = new TiposUsoController();
 
             TipoUso tipoUso = new TipoUso();
 
-            tipoUso.TipoUsoID = cellVallue.TipoUsoID;
-            tipoUso.NomeTipoUso = cellVallue.NomeTipoUso;
-            tipoUso.Descricao = cellVallue.Descricao;
+            tipoUso.TipoUsoID = int.Parse(EditaIDTipoUsoLabel.Text);
+            tipoUso.NomeTipoUso = EditaNomeTipoUsoLabel.Text;
+            tipoUso.Descricao = EditaDescricaoTipoUsoLabel.Text;
 
-            EditaTipoUsoView editaTipoUsoView = new EditaTipoUsoView(tipoUso);
+            tipoUsoController.Editar(tipoUso);
 
-            editaTipoUsoView.ShowDialog();
+            MessageBox.Show("Tipo de Uso Alterado com Sucesso");
             this.Close();
 
-          
+           
+        }
+
+        private void ExcluirTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -64,6 +64,9 @@
     <Compile Include="EditarLocacaoView.xaml.cs">
       <DependentUpon>EditarLocacaoView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditaTipoUsoView.xaml.cs">
+      <DependentUpon>EditaTipoUsoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TipoUsoListaView.xaml.cs">
       <DependentUpon>TipoUsoListaView.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
       <DependentUpon>TipoUsoView.xaml</DependentUpon>
     </Compile>
     <Page Include="EditarLocacaoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditaTipoUsoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
