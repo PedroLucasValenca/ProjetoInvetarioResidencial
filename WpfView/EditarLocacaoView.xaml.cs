@@ -28,5 +28,35 @@ namespace WpfView
         {
 
         }
+
+        private void CriarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CriarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CriarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListarItemButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
