@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,5 +78,28 @@ namespace WpfView
             tipoUsoListaView.ShowDialog();
         }
 
+        private void ItemDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            var grid = sender as DataGrid;
+
+            var cellVallue = (Modelo.Item)grid.SelectedValue;
+
+            Item item = new Item();
+
+            item.ItemID = cellVallue.ItemID;
+            item.NomeItem = cellVallue.NomeItem;
+            item.Descricao = cellVallue.Descricao;
+            item.DataArmazenamento = cellVallue.DataArmazenamento;
+            item.LocalID = cellVallue.LocalID;
+            item.TipoUsoID = cellVallue.TipoUsoID;
+
+            EditaItemView editaItemView = new EditaItemView(item);
+
+            editaItemView.ShowDialog();
+            this.Close();
+
+            
+        }
     }
 }

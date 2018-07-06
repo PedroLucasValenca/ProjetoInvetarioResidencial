@@ -23,6 +23,6 @@
 
         </Menu>
         <Label  Content="Listar Itens" HorizontalAlignment="Center" Margin="341,45,334,0" VerticalAlignment="Top" FontSize="22" Width="117"/>
-        <DataGrid x:Name="ItemDataGrid" HorizontalAlignment="Center" Height="340" Margin="91,111,80,0" VerticalAlignment="Top" Width="721" AutoGenerateColumns="True"  Loaded="ItemDataGrid_Load"/>
+        <DataGrid x:Name="ItemDataGrid" HorizontalAlignment="Center" Height="340" Margin="91,111,80,0" VerticalAlignment="Top" Width="721" AutoGenerateColumns="True"  Loaded="ItemDataGrid_Load" SelectionMode="Single" SelectionUnit="FullRow" MouseDoubleClick="ItemDataGrid_MouseDoubleClick"/>
     </Grid>
 </Window>

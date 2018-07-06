@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditaItemView.xaml.cs">
+      <DependentUpon>EditaItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditarLocacaoView.xaml.cs">
       <DependentUpon>EditarLocacaoView.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
     <Compile Include="TipoUsoView.xaml.cs">
       <DependentUpon>TipoUsoView.xaml</DependentUpon>
     </Compile>
+    <Page Include="EditaItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditarLocacaoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
