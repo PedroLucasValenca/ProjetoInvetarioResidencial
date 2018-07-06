@@ -25,8 +25,8 @@
         <Label  Content="Item" HorizontalAlignment="Center" Margin="371,45,367,0" VerticalAlignment="Top" FontSize="22"/>
         <Label Content="Nome Item" HorizontalAlignment="Left" Margin="90,145,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972" />
         <TextBox x:Name="NomeItemLabel" HorizontalAlignment="Left" Height="31" Margin="296,145,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="171"/>
-        <Label Content="Quantidade" HorizontalAlignment="Left" Margin="90,202,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
-        <TextBox x:Name="QuantidadeLabel" HorizontalAlignment="Left" Height="31" Margin="296,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="171"/>
+        <Label Content="Quantidade" HorizontalAlignment="Left" Margin="90,202,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972" ToolTip="Digite Somente Números"/>
+        <TextBox x:Name="QuantidadeLabel" HorizontalAlignment="Left" Height="31" Margin="296,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="171" ToolTip="Digite Somente Números"/>
         <Label Content="Descrição" HorizontalAlignment="Left" Margin="90,256,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
         <TextBox x:Name="DescricaoLabel" HorizontalAlignment="Left" Height="31" Margin="296,256,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="171"/>
         <Label Content="Data Armazenamento" HorizontalAlignment="Left" Margin="90,315,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.719,0.972"/>
