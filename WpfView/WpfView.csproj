@@ -61,12 +61,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditarLocacaoView.xaml.cs">
+      <DependentUpon>EditarLocacaoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TipoUsoListaView.xaml.cs">
       <DependentUpon>TipoUsoListaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TipoUsoView.xaml.cs">
       <DependentUpon>TipoUsoView.xaml</DependentUpon>
     </Compile>
+    <Page Include="EditarLocacaoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ItemView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
