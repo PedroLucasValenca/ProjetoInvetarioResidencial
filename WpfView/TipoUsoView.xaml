@@ -27,6 +27,6 @@
         <Label Content="Descrição Tipo de Uso" HorizontalAlignment="Left" Margin="144,237,0,0" VerticalAlignment="Top" Height="37" Width="173" FontSize="16"/>
         <TextBox x:Name="DescricaoTipoUsoLabel" HorizontalAlignment="Left" Height="41" Margin="350,233,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5"></TextBox>
         <Button x:Name="CadastrarTipoUsoButton" Content="Cadastrar" HorizontalAlignment="Left" Margin="218,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="CadastrarTipoUsoButton_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="405,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="405,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="CancelarTipoUsoButton_Click"/>
     </Grid>
 </Window>

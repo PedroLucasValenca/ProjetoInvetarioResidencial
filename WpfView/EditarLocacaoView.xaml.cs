@@ -47,6 +47,9 @@ namespace WpfView
 
             locaisController.Editar(local);
 
+            MessageBox.Show("Locação alterada com sucesso");
+            this.Close();
+
         }
 
         private void CriarLocacaoButton_Click(object sender, RoutedEventArgs e)

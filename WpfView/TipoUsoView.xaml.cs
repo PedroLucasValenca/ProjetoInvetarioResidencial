@@ -84,5 +84,9 @@ namespace WpfView
             tipoUsoListaView.ShowDialog();
         }
 
+        private void CancelarTipoUsoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

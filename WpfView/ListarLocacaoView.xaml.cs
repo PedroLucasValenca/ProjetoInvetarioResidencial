@@ -97,6 +97,7 @@ namespace WpfView
             EditarLocacaoView editarLocacaoView = new EditarLocacaoView(local);
 
             editarLocacaoView.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -66,6 +66,9 @@ namespace WpfView
             local.Descricao = DescricaoLocalLabel.Text;
 
             locaisController.Adicionar(local);
+
+            MessageBox.Show("Locação adicionado com sucesso");
+            this.Close();
         }
 
         private void CriarTipoUsoButton_Click(object sender, RoutedEventArgs e)
@@ -80,6 +83,11 @@ namespace WpfView
             TipoUsoListaView tipoUsoListaView = new TipoUsoListaView();
 
             tipoUsoListaView.ShowDialog();
+        }
+
+        private void CancelarLocacaoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
