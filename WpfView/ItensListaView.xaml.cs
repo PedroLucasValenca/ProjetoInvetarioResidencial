@@ -83,18 +83,19 @@ namespace WpfView
 
             var grid = sender as DataGrid;
 
-            var cellVallue = (Modelo.Item)grid.SelectedValue;
+            Item cellVallue = (Item)grid.SelectedValue;
 
-            Item item = new Item();
+            //Item item = new Item();
 
-            item.ItemID = cellVallue.ItemID;
-            item.NomeItem = cellVallue.NomeItem;
-            item.Descricao = cellVallue.Descricao;
-            item.DataArmazenamento = cellVallue.DataArmazenamento;
-            item.LocalID = cellVallue.LocalID;
-            item.TipoUsoID = cellVallue.TipoUsoID;
+            //item.ItemID = cellVallue.ItemID;
+            //item.NomeItem = cellVallue.NomeItem;
+            //item.Descricao = cellVallue.Descricao;
+            //item.DataArmazenamento = cellVallue.DataArmazenamento;
+            //item.LocalID = cellVallue.LocalID;
+            //item.TipoUsoID = cellVallue.TipoUsoID;
 
-            EditaItemView editaItemView = new EditaItemView(item);
+            //EditaItemView editaItemView = new EditaItemView(item);
+            EditaItemView editaItemView = new EditaItemView(cellVallue);
 
             editaItemView.ShowDialog();
             this.Close();

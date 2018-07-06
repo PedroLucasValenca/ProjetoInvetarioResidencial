@@ -37,6 +37,7 @@ namespace Controllers
             if (item != null)
             {
                 contexto.Items.Remove(item);
+                contexto.SaveChanges();
             }
 
         }

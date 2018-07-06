@@ -92,6 +92,18 @@ namespace WpfView
 
         private void ExcluirTipoUsoButton_Click(object sender, RoutedEventArgs e)
         {
+            TipoUso tipoUso = new TipoUso();
+
+            int TipoUsoID = int.Parse(EditaIDTipoUsoLabel.Text);
+
+            TiposUsoController tiposUsoController = new TiposUsoController();
+
+            tiposUsoController.Excluir(TipoUsoID);
+
+            
+             MessageBox.Show("Item Excluido com Sucesso!!");
+
+             this.Close();
 
         }
     }

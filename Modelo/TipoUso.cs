@@ -13,5 +13,10 @@ namespace Modelo
         public String NomeTipoUso { get; set; }
 
         public String Descricao { get; set; }
+
+        public override string ToString()
+        {
+            return NomeTipoUso + " Desc: " + Descricao;
+        }
     }
 }

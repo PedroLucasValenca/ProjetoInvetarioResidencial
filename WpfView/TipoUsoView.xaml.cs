@@ -33,7 +33,7 @@ namespace WpfView
             TipoUso tipoUso = new TipoUso();
 
             tipoUso.NomeTipoUso = NomeTipoUsoLabel.Text;
-            tipoUso.Descricao = NomeTipoUsoLabel.Text;
+            tipoUso.Descricao = DescricaoTipoUsoLabel.Text;
 
             tipoUsoController.Adicionar(tipoUso);
             MessageBox.Show("Tipo de Uso adicionado com sucesso");

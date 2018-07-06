@@ -29,8 +29,16 @@ namespace WpfView
             EditaNomeItemLabel.Text = item.NomeItem;
             EditaDescricaoLabel.Text = item.Descricao;
             EditaQuantidadeLabel.Text = item.Quantidade.ToString();
-            EditaLocalArmazenamentoLabel.SelectedIndex = item.LocalID;
-            EditaTipoUsoLabel.SelectedIndex = item.TipoUsoID;
+
+            LocaisController locaisController = new LocaisController();
+            EditaLocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
+            EditaLocalArmazenamentoLabel.SelectedValuePath = "LocalID";
+            EditaLocalArmazenamentoLabel.SelectedValue = item.LocalID;
+
+            TiposUsoController tiposUsoController = new TiposUsoController();
+            EditaTipoUsoLabel.ItemsSource = tiposUsoController.ListarTodos();
+            EditaTipoUsoLabel.SelectedValuePath = "TipoUsoID";
+            EditaTipoUsoLabel.SelectedValue = item.TipoUsoID;
             
 
 
@@ -59,19 +67,15 @@ namespace WpfView
 
         private void ExcluirButton_Click(object sender, RoutedEventArgs e)
         {
-            Item item = new Item();
-            item.ItemID = int.Parse(EditaIDItemLabel.Text);
+            int ItemID = int.Parse(EditaIDItemLabel.Text);
                 
             ItensController itensController = new ItensController();
 
-            itensController.Excluir(item.ItemID);
+            itensController.Excluir(ItemID);
 
             MessageBox.Show("Item Excluido com Sucesso!!");
 
             this.Close();
-
-            
-
         }
 
         private void ListarItemButton_Click(object sender, RoutedEventArgs e)
@@ -119,17 +123,17 @@ namespace WpfView
 
         private void TipoUsoLabel_Loaded(object sender, RoutedEventArgs e)
         {
-            TiposUsoController tiposUsoController = new TiposUsoController();
+           // TiposUsoController tiposUsoController = new TiposUsoController();
 
-            EditaTipoUsoLabel.ItemsSource = tiposUsoController.ListarTodos();
+          //  EditaTipoUsoLabel.ItemsSource = tiposUsoController.ListarTodos();
            
         }
 
         private void LocalArmazenamentoLabel_Loaded(object sender, RoutedEventArgs e)
         {
-            LocaisController locaisController = new LocaisController();
+            //LocaisController locaisController = new LocaisController();
 
-            EditaLocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
+            //EditaLocalArmazenamentoLabel.ItemsSource = locaisController.ListarTodos();
         }
     }
 }

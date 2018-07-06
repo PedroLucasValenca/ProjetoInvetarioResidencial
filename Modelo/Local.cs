@@ -13,5 +13,10 @@ namespace Modelo
         public String NomeLocal { get; set; }
 
         public String Descricao { get; set; }
+
+        public override string ToString()
+        {
+            return NomeLocal + " Desc:" + Descricao;
+        }
     }
 }
