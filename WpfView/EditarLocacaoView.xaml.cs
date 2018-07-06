@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using Controllers;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace WpfView
         {
             InitializeComponent();
 
+            EditaIDLocacaoLabel.Text = local.LocalID.ToString();
             EditaNomeLocalLabel.Text = local.NomeLocal;
             EditaDescricaoLocalLabel.Text = local.Descricao;
 
@@ -36,6 +38,14 @@ namespace WpfView
 
         private void EditaLocacaoButton_Click(object sender, RoutedEventArgs e)
         {
+            LocaisController locaisController = new LocaisController();
+
+            Local local = new Local();
+            local.LocalID = int.Parse(EditaIDLocacaoLabel.Text);
+            local.NomeLocal = EditaNomeLocalLabel.Text;
+            local.Descricao = EditaDescricaoLocalLabel.Text;
+
+            locaisController.Editar(local);
 
         }
 

@@ -29,5 +29,7 @@
         <TextBox x:Name="EditaDescricaoLocalLabel" HorizontalAlignment="Left" Height="41" Margin="350,233,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.5,0.5"></TextBox>
         <Button x:Name="EditaLocacaoButton" Content="Alterar" HorizontalAlignment="Left" Margin="174,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16" Click="EditaLocacaoButton_Click" />
         <Button Content="Excluir" Background="Red" HorizontalAlignment="Left" Margin="392,378,0,0" VerticalAlignment="Top" Width="150" Height="50" FontSize="16"/>
+        <Label Content="ID Locação" HorizontalAlignment="Left" Margin="35,75,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>
+        <TextBox x:Name="EditaIDLocacaoLabel" HorizontalAlignment="Left" Height="35" Margin="44,106,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72" FontSize="18"/>
     </Grid>
 </Window>
