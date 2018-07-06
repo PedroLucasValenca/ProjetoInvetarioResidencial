@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,15 @@ namespace WpfView
         public EditarLocacaoView()
         {
             InitializeComponent();
+        }
+    
+        public EditarLocacaoView(Local local)
+        {
+            InitializeComponent();
+
+            EditaNomeLocalLabel.Text = local.NomeLocal;
+            EditaDescricaoLocalLabel.Text = local.Descricao;
+
         }
 
         private void EditaLocacaoButton_Click(object sender, RoutedEventArgs e)

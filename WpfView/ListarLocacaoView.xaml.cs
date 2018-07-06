@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,7 +80,23 @@ namespace WpfView
 
         private void LocacaoDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            
+            var grid = sender as DataGrid;
 
+            var cellVallue = (Modelo.Local)grid.SelectedValue;
+
+            Local local = new Local();
+
+            local.LocalID = cellVallue.LocalID;
+            local.Descricao = cellVallue.Descricao;
+            local.NomeLocal = cellVallue.NomeLocal;
+
+           // MessageBox.Show(cellVallue.Descricao);
+           // MessageBox.Show(local.NomeLocal);
+
+            EditarLocacaoView editarLocacaoView = new EditarLocacaoView(local);
+
+            editarLocacaoView.ShowDialog();
         }
     }
 }
